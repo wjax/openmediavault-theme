@@ -60,7 +60,7 @@ class OMVRpcServiceTheme extends \OMV\Rpc\ServiceAbstract
         $db->set($object);
 
         // run script to apply theme
-        $cmd = new \OMV\System\Process("omv-mkconf", "apply_theme", escapeshellarg($params['theme_select']));
+        $cmd = new \OMV\System\Process("/usr/share/openmediavault/mkconf/", "apply_theme", escapeshellarg($params['theme_select']));
         $cmd->setRedirect2to1();
         $cmd->execute();
 
@@ -82,7 +82,7 @@ class OMVRpcServiceTheme extends \OMV\Rpc\ServiceAbstract
         $db->set($object);
 
         // run script to apply logo
-        $cmd = new \OMV\System\Process("omv-mkconf", "apply_logo", escapeshellarg($params["logo_url"]));
+        $cmd = new \OMV\System\Process("/usr/share/openmediavault/mkconf/", "apply_logo", escapeshellarg($params["logo_url"]));
         $cmd->setRedirect2to1();
         $cmd->execute();
 
@@ -103,7 +103,7 @@ class OMVRpcServiceTheme extends \OMV\Rpc\ServiceAbstract
         $db->set($object);
 
         // run script to apply header text
-        $cmd = new \OMV\System\Process("omv-mkconf", "apply_header_text", escapeshellarg($params["header_text"]));
+        $cmd = new \OMV\System\Process("/usr/share/openmediavault/mkconf/", "apply_header_text", escapeshellarg($params["header_text"]));
         $cmd->setRedirect2to1();
         $cmd->execute();
 
@@ -113,7 +113,7 @@ class OMVRpcServiceTheme extends \OMV\Rpc\ServiceAbstract
     public function resetLogo($params, $context)
     {
         // run script to reset
-        $cmd = new \OMV\System\Process("omv-mkconf", "reset_logo");
+        $cmd = new \OMV\System\Process("/usr/share/openmediavault/mkconf/", "reset_logo");
         $cmd->setRedirect2to1();
         $cmd->execute();
     }
@@ -132,7 +132,7 @@ class OMVRpcServiceTheme extends \OMV\Rpc\ServiceAbstract
         $db->set($object);
 
         // run script to apply header text
-        $cmd = new \OMV\System\Process("omv-mkconf", "apply_header_bg_color", escapeshellarg($params["header_bg_color"]));
+        $cmd = new \OMV\System\Process("/usr/share/openmediavault/mkconf/", "apply_header_bg_color", escapeshellarg($params["header_bg_color"]));
         $cmd->setRedirect2to1();
         $cmd->execute();
 
@@ -142,7 +142,7 @@ class OMVRpcServiceTheme extends \OMV\Rpc\ServiceAbstract
     public function resetHeaderBgColor($params, $context)
     {
         // run script to apply header text
-        $cmd = new \OMV\System\Process("omv-mkconf", "reset_header_bg_color");
+        $cmd = new \OMV\System\Process("/usr/share/openmediavault/mkconf/", "reset_header_bg_color");
         $cmd->setRedirect2to1();
         $cmd->execute();
     }
@@ -161,7 +161,7 @@ class OMVRpcServiceTheme extends \OMV\Rpc\ServiceAbstract
         $db->set($object);
 
         // run script to apply header text
-        $cmd = new \OMV\System\Process("omv-mkconf", "apply_header_bg_image", escapeshellarg($params["header_bg_image"]));
+        $cmd = new \OMV\System\Process("/usr/share/openmediavault/mkconf/", "apply_header_bg_image", escapeshellarg($params["header_bg_image"]));
         $cmd->setRedirect2to1();
         $cmd->execute();
 
@@ -171,7 +171,7 @@ class OMVRpcServiceTheme extends \OMV\Rpc\ServiceAbstract
     public function resetHeaderBgImage($params, $context)
     {
         // run script to apply header text
-        $cmd = new \OMV\System\Process("omv-mkconf", "reset_header_bg_image");
+        $cmd = new \OMV\System\Process("/usr/share/openmediavault/mkconf/", "reset_header_bg_image");
         $cmd->setRedirect2to1();
         $cmd->execute();
     }
@@ -190,7 +190,7 @@ class OMVRpcServiceTheme extends \OMV\Rpc\ServiceAbstract
         $db->set($object);
 
         // run script to apply header text
-        $cmd = new \OMV\System\Process("omv-mkconf", "apply_font_size_weight", escapeshellarg($params["font_size"]), escapeshellarg($params["font_weight"]));
+        $cmd = new \OMV\System\Process("/usr/share/openmediavault/mkconf/", "apply_font_size_weight", escapeshellarg($params["font_size"]), escapeshellarg($params["font_weight"]));
         $cmd->setRedirect2to1();
         $cmd->execute();
 
@@ -200,7 +200,7 @@ class OMVRpcServiceTheme extends \OMV\Rpc\ServiceAbstract
     public function resetFont($params, $context)
     {
         // run script to apply header text
-        $cmd = new \OMV\System\Process("omv-mkconf", "reset_font_size_weight");
+        $cmd = new \OMV\System\Process("/usr/share/openmediavault/mkconf/", "reset_font_size_weight");
         $cmd->setRedirect2to1();
         $cmd->execute();
     }
